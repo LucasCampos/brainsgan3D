@@ -1,0 +1,36 @@
+hyperparameters:
+  batch_size: 2
+  feature_size: 32
+  learning_rate_decay: 0.99
+  learning_rate_disc: 1.0e-6
+  learning_rate_gen: 1.0e-4
+  learning_rate_steps: 4920
+  max_checkpoints: 265
+  num_epochs: 100
+  residual_blocks: 6
+  upsampling_factor: 2
+image_sizes:
+  depth: 168
+  height: 196
+  num_x_patches: 2
+  num_y_patches: 2
+  num_z_patches: 2
+  width: 160
+  x_overlap_length: 32
+  y_overlap_length: 32
+  z_overlap_length: 32
+inputs:
+  data_eval: data_eval.txt
+  data_train: data_train.txt
+  restore_checkpoint_evaluation: checkpoints/
+  restore_checkpoint_training: null
+output_dirs:
+  checkpoint_dir: checkpoints/
+  eval_dir: eval_predictions/
+  log_dir: runtime_logs/
+  loss_dir: loss-info/
+outputs:
+  log_level: debug
+  max_checkpoints: 100
+  save_every_n_epochs: 10
+  store_loss_every_n_iters: 1
