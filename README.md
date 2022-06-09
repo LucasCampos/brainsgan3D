@@ -27,6 +27,8 @@ to create a local install using conda as
 conda install cudatoolkit==11.0.221 cuDNN
 ```
 
+This whole process will take a few minutes, depending your internet connection.
+
 ## Usage
 
 The single entrypoint of the code is the `main.py` file. In order to input
@@ -38,6 +40,9 @@ In order to train the network, use the following line
 ```bash
 python main.py train <path/to/config>
 ```
+
+Training can be extremely slow, and will depend on the size of the images. For
+the default parameters below, it would take about a week in a single P100 GPU.
 
 ## Parameter file
 
